@@ -17,5 +17,9 @@ L="log -p i -t cm"
 
 $L "99memory: TG-CM7 Setting memory management parameters"
 
-echo "1536,3072,4096,10000,25000,32000" > /sys/module/lowmemorykiller/parameters/minfree
+# Uncomment the following line to customize lowmemkiller settings. Remember
+# these are memory pages, to convert from MB to to pages used here:
+# Pages = X MB * 1024 / 4
+
+#echo "1536,3072,4096,10000,25000,32000" > /sys/module/lowmemorykiller/parameters/minfree
 exit 0

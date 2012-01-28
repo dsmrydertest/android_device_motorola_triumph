@@ -197,6 +197,7 @@ PRODUCT_COPY_FILES += \
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.ril.v3=datacall,signalstrength \
     ro.opengles.version=131072
 
 # Perfomance tweaks and misc

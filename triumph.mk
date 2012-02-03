@@ -71,6 +71,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
     device/motorola/triumph/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
     device/motorola/triumph/keychars/qwerty.kcm.bin:system/usr/keychars/bi041p.kcm.bin \
+    device/motorola/triumph/keychars/qwerty.kcm.bin:system/usr/keychars/fbx_kybd.kcm.bin \
     device/motorola/triumph/keychars/sf6_kybd.kcm.bin:system/usr/keychars/sf6_kybd.kcm.bin \
     device/motorola/triumph/keychars/sf8_kybd.kcm.bin:system/usr/keychars/sf8_kybd.kcm.bin \
     device/motorola/triumph/keychars/surf_keypad.kcm.bin:system/usr/keychars/surf_keypad.kcm.bin \

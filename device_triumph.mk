@@ -28,7 +28,7 @@ PRODUCT_PACKAGES += \
     copybit.msm7x30 \
     gralloc.msm7x30 \
     hwcomposer.msm7x30 \
-    overlay.default \
+    overlay.msm7x30 \
     libgenlock \
     libmemalloc \
     liboverlay \
@@ -42,8 +42,8 @@ PRODUCT_PACKAGES += \
     libOmxVdec
 
 # Camera
-#PRODUCT_PACKAGES += \
-#    camera.msm7x30
+PRODUCT_PACKAGES += \
+    camera.msm7x30
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -106,7 +106,8 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/keylayout/msm_tma300_ts.kl:system/usr/keylayout/msm_tma300_ts.kl \
     device/motorola/triumph/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/motorola/triumph/keylayout/7k_handset.kl:system/usr/keylayout/7k_handset.kl \
-    device/motorola/triumph/keylayout/surf_keypad.kl:system/usr/keylayout/surf_keypad.kl
+    device/motorola/triumph/keylayout/surf_keypad.kl:system/usr/keylayout/surf_keypad.kl \
+    device/motorola/triumph/keylayout/Vendor_2378_Product_100a.kl:system/usr/keylayout/Vendor_2378_Product_100a.kl
 
 # Video firmware
 PRODUCT_COPY_FILES += \
@@ -133,9 +134,9 @@ PRODUCT_COPY_FILES += \
 # Hostapd
 PRODUCT_COPY_FILES += \
     device/motorola/triumph/files/etc/firmware/wlan/hostapd_default.conf:/system/etc/firmware/wlan/hostapd_default.conf \
-    device/motorola/triumph/files/etc/init.d/08hostapd:/system/etc/init.d/08hostapd
-#    device/motorola/triumph/prebuilt/bin/hostapd:/system/bin/hostapd \
-#    device/motorola/triumph/prebuilt/bin/hostapd_cli:/system/bin/hostapd_cli
+    device/motorola/triumph/files/etc/init.d/08hostapd:/system/etc/init.d/08hostapd \
+    device/motorola/triumph/prebuilt/bin/hostapd:/system/bin/hostapd \
+    device/motorola/triumph/prebuilt/bin/hostapd_cli:/system/bin/hostapd_cli
 
 
 # Audio 
@@ -187,9 +188,8 @@ PRODUCT_COPY_FILES += \
 
 # Modules
 # commenting these until I rebuild the kernel and make up to date versions of these modules
-#PRODUCT_COPY_FILES += \
-#    device/motorola/triumph/modules/tun.ko:/system/lib/modules/tun.ko \
-#    device/motorola/triumph/modules/cifs.ko:/system/lib/modules/cifs.ko
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/modules/cifs.ko:/system/lib/modules/cifs.ko
 
 # Init.d task management
 PRODUCT_COPY_FILES += \
@@ -214,10 +214,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase.yt=android-motorola \
     ro.com.google.clientidbase.am=android-motorola \
     ro.com.google.clientidbase.ms=android-motorola \
-    ro.com.google.clientidbase.gmm=android-motorola
-
-# Triumph uses high-density artwork where available
-# PRODUCT_LOCALES += hdpi
+    ro.com.google.clientidbase.gmm=android-motorola \
+    ro.telephony.ril.v3=datacall,signalstrength
 
 # Set region
 PRODUCT_DEFAULT_LANGUAGE := en_US
@@ -234,3 +232,9 @@ PRODUCT_DEVICE := triumph
 PRODUCT_BRAND := Motorola
 PRODUCT_MODEL := WX435
 PRODUCT_MANUFACTURER := Motorola
+
+PRODUCT_VERSION_MAJOR := 9
+PRODUCT_VERSION_MINOR := 0.0
+
+PRODUCT_PROPERTY_OVERRIDES += \
+            ro.cm.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).Triumph-Alpha-0.5.2

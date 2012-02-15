@@ -1,7 +1,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
+#$(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product-if-exists, vendor/motorola/triumph/triumph-vendor.mk)
 
@@ -70,6 +70,8 @@ PRODUCT_COPY_FILES += \
     device/motorola/triumph/keychars/fih_ringswitch.kcm.bin:system/usr/keychars/fih_ringswitch.kcm.bin \
     device/motorola/triumph/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \
     device/motorola/triumph/keychars/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin \
+    device/motorola/triumph/keychars/qwerty.kcm.bin:system/usr/keychars/bi041p.kcm.bin \
+    device/motorola/triumph/keychars/qwerty.kcm.bin:system/usr/keychars/fbx_kybd.kcm.bin \
     device/motorola/triumph/keychars/sf6_kybd.kcm.bin:system/usr/keychars/sf6_kybd.kcm.bin \
     device/motorola/triumph/keychars/sf8_kybd.kcm.bin:system/usr/keychars/sf8_kybd.kcm.bin \
     device/motorola/triumph/keychars/surf_keypad.kcm.bin:system/usr/keychars/surf_keypad.kcm.bin \
@@ -123,6 +125,7 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
+    device/motorola/triumph/files/etc/gps.conf:system/etc/gps.conf \
     device/motorola/triumph/files/etc/loc_parameter.ini:system/etc/loc_parameter.ini
 
 # APN
@@ -159,7 +162,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.execution-mode=int:jit \
     dalvik.vm.heapsize=32m \
-    persist.sys.use_dithering=1 \
+    persist.sys.use_dithering=0 \
     ro.sf.lcd_density=240 \
     ro.compcache.default=0
 

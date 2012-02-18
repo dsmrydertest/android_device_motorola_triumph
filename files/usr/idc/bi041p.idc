@@ -35,7 +35,7 @@ touch.touchSize.calibration = pressure
 touch.toolSize.calibration = area
 touch.toolSize.areaScale = 22
 touch.toolSize.areaBias = 0
-touch.toolSize.linearScale = 3
+touch.toolSize.linearScale = 6
 touch.toolSize.linearBias = 0
 touch.toolSize.isSummed = 0
 
@@ -46,7 +46,7 @@ touch.toolSize.isSummed = 0
 # units although we don't expect these values to be accurate.
 touch.pressure.calibration = amplitude
 touch.pressure.source = default
-touch.pressure.scale = 0.09
+touch.pressure.scale = 0.0125
 
 # Size
 touch.size.calibration = geometric

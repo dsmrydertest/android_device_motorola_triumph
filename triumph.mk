@@ -225,8 +225,12 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 $(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := motorola_triumph
-PRODUCT_DEVICE := triumph
+PRODUCT_NAME := Motorola_Triumph
+PRODUCT_DEVICE := Triumph
 PRODUCT_BRAND := Motorola
 PRODUCT_MODEL := WX435
 PRODUCT_MANUFACTURER := Motorola
+# Adding bootsounds :-) seems credit goes to spiicytuna over at XDA
+
+PRODUCT_COPY_FILES += \
+    device/motorola/triumph/prebuilt/bootsound:/system/bin/bootsound
